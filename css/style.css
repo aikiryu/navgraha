@@ -6,6 +6,8 @@
     max-width: 768px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    padding-top: 110px;
 }
 
 
@@ -17,22 +19,31 @@
 /* header */
 
 header{
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top:0;
     left: 0;
-    background-color: #f5f5f5;
     border-bottom: #fff;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 999;
 }
 
 h2{
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 20px;
 }
 nav .days{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 40px;
+    padding-top: 10px;
+    box-sizing: content-box;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav .days li{
@@ -40,6 +51,7 @@ nav .days li{
     padding:5px 10px;
     border:1px solid #2e3687;
     border-radius: 40px;
+    font-size: 3vw;
 }
 
 nav .days li.active{
@@ -52,6 +64,7 @@ nav .current{
     text-align: center;
     padding: 5px 0;
     border-bottom: 1px solid #fff;
+    display: none;
 
 }
 
@@ -61,7 +74,7 @@ nav .current{
     line-height: 60px;
     text-align: center;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: t6;
 }
 
 /*  main */
@@ -93,10 +106,10 @@ main{
 
 .mantra{
     padding:20px;
-    border: 1px solid #fff;
+    border: 1px solid rgba(255,255,255,0.4);
     box-sizing: content-box;
     margin-top: 40px;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
 }
 
 .mantra>div:not(:last-child){
@@ -106,11 +119,17 @@ main{
     display: block;
 }
 .mantra h3{
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    display: inline-block;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 .mantra .en{
     font-weight: 600;
     margin-bottom: 2px;
+}
+
+.mantra .kr{
+    font-weight: 300;
 }
 
 /* footer */
@@ -135,4 +154,34 @@ footer .copyright{
     #wrap{
         border: 1px solid #ccc;
     }
+}
+
+/* 라후/케투 */
+
+.rahu_ketu{
+    display: none;
+    width: 80px;
+    height:60px;
+    position: fixed;
+    top: 110px;
+    right:20px;
+    background-color: rgba(255,255,255,0);
+    border-radius: 0 0 10px 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-top: 0;
+    box-shadow: 4px 5px 10px rgba(0,0,0,0.1);
+}
+
+.rahu_ketu span{
+    display: block;
+}
+
+.rahu_ketu .time{
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+.rahu_ketu .txt{
+    font-size: 18px;
+    font-weight: 300;
 }

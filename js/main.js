@@ -55,6 +55,7 @@ setInterval(clock,500);
 
 
 function theme(x){
+
 $('nav .days').children().eq(x)
 .addClass('active').siblings()
 .removeClass('active');
@@ -173,7 +174,7 @@ $('nav .days').children().eq(x)
         chakraEn : `Om Sreem Om`,
         chakraKr : `옴 스림 옴`,
         astroEn : `Om dram dreem droum sah shukray namah`,
-        astroKr : `옴 드람 드림 드로움 사 슈크라이나마하`,
+        astroKr : `옴 드람 드림 드로움 사 슈크라이 나마하`,
         gayaH3 : `금성 가야트리 만트라`,
         gayaEn : `Om Ashwadwajaya Vidmahe<br>
         Dhanur Hasthaya Dheemahi<br>
@@ -204,51 +205,77 @@ $('nav .days').children().eq(x)
         타노 만다 프라초다얏`
     },
     {
-        name : `mon`,
-        mainColor : `#d35825`,
-        bgColor : `#f5f5f5`,
-        h2 : `달 - 아즈나 - 찬드라`,
-        mandaraCap : `찬드라 : 태음 만다라`,
-        mandaraImg : `mandara_mon.jpg`,
-        yantraCap : `찬드라 얀트라`,
-        yantraImg : `yantra_mon.png`,
-        chakraEn : `Om Kleem Om`,
-        chakraKr : `옴 클림 옴`,
-        astroEn : `Om shram shreem shraum sah chandray namah`,
-        astroKr : `옴 슈람 슈림 슈라움 사 찬드라이 나마하`,
-        gayaH3 : `달(태음) 가야트리 만트라`,
-        gayaEn : `Om Padmadwajaya Vidmahe<br>
-        Hema Roopaya Dheemahi<br>
-        Thanno Soma Prachodayath`,
-        gayaKr : `옴 파드마드와자야 비드마히<br>
-        헤마 루파야 디마히<br>
-        타노 소마 프라초다얏`
+        name : `rahu`,
+        mainColor : `#fff`,
+        bgColor : `#132549`,
+        h2 : `용두 - 빈두 - 라후`,
+        mandaraCap : `라후 : 용두 만다라`,
+        mandaraImg : `mandara_rahu.png`,
+        yantraCap : `라후 얀트라`,
+        yantraImg : `yantra_rahu.png`,
+        chakraEn : `Om Hreem Om`,
+        chakraKr : `옴 흐림 옴`,
+        astroEn : `Om bhram bhreem bhroum sah rahave namah`,
+        astroKr : `옴 브ᄒ람 브ᄒ림 브ᄒ로움 사 라후베 나마하`,
+        gayaH3 : `라후 가야트리 만트라`,
+        gayaEn : `Om Nagadwajaya Vidmahe<br>
+        Padma Hasthaya Dheemahi<br>
+        Thanno Rahu Prachodayath`,
+        gayaKr : `옴 나가드와자야 비드마히<br>
+        파드마 하스타야 디마히<br>
+        타노 라후 프라초다얏`
     },
     {
-        name : `mon`,
-        mainColor : `#2e3687`,
-        bgColor : `#f5f5f5`,
-        h2 : `달 - 아즈나 - 찬드라`,
-        mandaraCap : `찬드라 : 태음 만다라`,
-        mandaraImg : `mandara_mon.jpg`,
-        yantraCap : `찬드라 얀트라`,
-        yantraImg : `yantra_mon.png`,
-        chakraEn : `Om Kleem Om`,
-        chakraKr : `옴 클림 옴`,
-        astroEn : `Om shram shreem shraum sah chandray namah`,
-        astroKr : `옴 슈람 슈림 슈라움 사 찬드라이 나마하`,
-        gayaH3 : `달(태음) 가야트리 만트라`,
-        gayaEn : `Om Padmadwajaya Vidmahe<br>
-        Hema Roopaya Dheemahi<br>
-        Thanno Soma Prachodayath`,
-        gayaKr : `옴 파드마드와자야 비드마히<br>
-        헤마 루파야 디마히<br>
-        타노 소마 프라초다얏`
+        name : `ketu`,
+        mainColor : `#fff`,
+        bgColor : `#4e2e21`,
+        h2 : `용미 - 소마 - 케투`,
+        mandaraCap : `케투 : 용미 만다라`,
+        mandaraImg : `mandara_ketu.png`,
+        yantraCap : `케투 얀트라`,
+        yantraImg : `yantra_ketu.png`,
+        chakraEn : `Om Dhum Om`,
+        chakraKr : `옴 둠 옴`,
+        astroEn : `Om shram shreem shroum sah ketuve namah`,
+        astroKr : `옴 싀럄 싀림 싀로움 사 케투베 나마하`,
+        gayaH3 : `케투 가야트리 만트라`,
+        gayaEn : `Om Ashwadwajaya Vidmahe<br>
+        Shoola Hasthaya Dheemahi<br>
+        Thanno Ketu Prachodayath`,
+        gayaKr : `옴 아스와드야자야 비드마히<br>
+        술라 하스타야 디마히<br>
+        타노 케두 프라초다얏`
     },
 ];
     console.log(x);
 
 function paintScreen(){
+
+    if(x == 3 || x == 6 || x == 7 || x == 8){
+        $('.rahu_ketu').stop().slideDown();
+
+            if(x == 3){
+        $('.rahu_ketu .txt').text('라후');
+        $('.rahu_ketu').attr('data-state','rahu');
+          }else if(x == 6){
+        $('.rahu_ketu .txt').text('케투');
+        $('.rahu_ketu').attr('data-state','ketu');
+          }else if(x == 7){
+            $('.rahu_ketu .time').text('아침');
+            $('.rahu_ketu .txt').text('붓다');
+            $('.rahu_ketu').attr('data-state','budha');
+
+          }else if(x == 8){
+            $('.rahu_ketu .time').text('아침');
+            $('.rahu_ketu .txt').text('샤니');
+            $('.rahu_ketu').attr('data-state','shani');
+          }
+  
+          
+    }else{
+        $('.rahu_ketu').hide();
+    }
+
 
     let dayTit = themes[x].name,
         mainColor = themes[x].mainColor,
@@ -266,13 +293,10 @@ function paintScreen(){
         gayaEn = themes[x].gayaEn,
         gayaKr = themes[x].gayaKr;
 
-     $('#wrap').css({
+     $('#wrap, body').css({
         'backgroundColor' :  bgColor,
         'color' : mainColor
      })
-     $('header').css({
-        'backgroundColor' : bgColor,
-     });
      $('nav .days li').css({
         'borderColor' : mainColor,
         'color' : mainColor,
@@ -300,6 +324,7 @@ function paintScreen(){
      $('.gayatri .en').html(gayaEn);
      $('.gayatri .kr').html(gayaKr);
 
+     
 
 }//paintScreen()
 
@@ -319,4 +344,22 @@ $('nav .days').children().click(function(e){
     $(this).addClass('active').siblings().removeClass('active');
     theme(i);
     
+});
+
+
+
+
+$('.rahu_ketu').click(function(){
+
+    let state = $(this).attr('data-state');
+    if(state == 'rahu'){
+        theme(7);
+    }else if(state == 'ketu'){
+        theme(8);
+    }else if(state == 'budha'){
+        theme(3);
+    }else if(state == 'shani'){
+        theme(6);
+    }
+
 })
