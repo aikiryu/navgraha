@@ -255,9 +255,11 @@ function paintScreen(){
         $('.rahu_ketu').stop().slideDown();
 
             if(x == 3){
+        $('.rahu_ketu .time').text('저녁');
         $('.rahu_ketu .txt').text('라후');
         $('.rahu_ketu').attr('data-state','rahu');
           }else if(x == 6){
+        $('.rahu_ketu .time').text('저녁');
         $('.rahu_ketu .txt').text('케투');
         $('.rahu_ketu').attr('data-state','ketu');
           }else if(x == 7){

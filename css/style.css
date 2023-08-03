@@ -80,7 +80,7 @@ nav .current{
 /*  main */
 
 main{
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 0 20px;
 }
 
@@ -99,6 +99,7 @@ main{
 
 .mandaraCaption, .yantraCaption{
     text-align: center;
+    margin-top: 5px;
 }
 .yantra{
     margin-top: 40px;
@@ -124,7 +125,7 @@ main{
     border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 .mantra .en{
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 2px;
 }
 
@@ -138,7 +139,7 @@ footer{
     margin-top: 40px;
     text-align: center;
     font-size: 12px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 footer .copyright{
     margin-bottom: 5px;
